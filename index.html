@@ -12,7 +12,12 @@
 </head>
 <body>
     <nav class="navbar">
-        <img src="LOGO.png" alt="Logo" class="logo">Neto | Personal e Nutrição
+        <div class="logo-container">
+            <img src="logovl1.png" alt="Logo" class="logo">
+            <span class="personal-name">
+                <span class="name-black">Neto</span> | <span class="name-yellow">Personal e Nutrição</span>
+            </span>
+        </div>
         
         <div class="menu-toggle">
             <div class="bar"></div>
@@ -31,22 +36,30 @@
     </nav>
 
     <section id="home" class="home">
-        <h1>Transforme seu Corpo, Transforme sua Vida</h1>
-        <form id="formularioContato" class="formulario">
-            <input type="text" id="nome" placeholder="Seu Nome" required>
-            <input type="tel" id="whatsapp" placeholder="Seu WhatsApp" required>
-            <input type="email" id="email" placeholder="Seu E-mail" required>
-            <button type="submit" class="btn-enviar">Quero ser minha melhor versão!</button>
-        </form>
+        <div class="home-content">
+            <div class="image-container">
+                <img src="hero.png" alt="Descrição da foto" class="home-image">
+            </div>
+            <div class="form-container">
+                <h1>Transforme seu Corpo, Transforme sua Vida</h1>
+                <form id="formularioContato" class="formulario">
+                    <input type="text" id="nome" placeholder="Seu Nome" required>
+                    <input type="tel" id="whatsapp" placeholder="Seu WhatsApp" required>
+                    <input type="email" id="email" placeholder="Seu E-mail" required>
+                    <button type="submit" class="btn-enviar">Quero ser minha melhor versão!</button>
+                </form>
+            </div>
+        </div>
     </section>
 
     <section id="metodo" class="metodo">
         <h2>Conquiste o corpo e a saúde que você sempre quis</h2>
         <p>Descubra o método que te leva ao sucesso</p>
         <p>Através de uma avaliação completa, irei entender suas necessidades, hábitos e objetivos. Criaremos juntos um plano alimentar personalizado e um programa de treinamento sob medida para você.</p>
-        
+    
         <div class="metodo-grid">
             <div class="metodo-card">
+                <i class="fas fa-utensils"></i>
                 <h3>Consulta Nutricional Individualizada</h3>
                 <ul>
                     <li>Anamnese detalhada para entender sua rotina</li>
@@ -55,6 +68,7 @@
                 </ul>
             </div>
             <div class="metodo-card">
+                <i class="fa-solid fa-person-walking"></i>
                 <h3>Avaliação Postural e Corporal</h3>
                 <ul>
                     <li>Análise postural em repouso e movimento</li>
@@ -63,6 +77,7 @@
                 </ul>
             </div>
             <div class="metodo-card">
+                <i class="fas fa-dumbbell"></i>
                 <h3>Treinamento Personalizado</h3>
                 <ul>
                     <li>Programa de exercícios específico</li>
@@ -73,7 +88,7 @@
         </div>
         <div class="btn-container">
             <button class="btn-enviar" onclick="scrollToForm()">Quero ser minha melhor versão!</button>
-         </div>
+        </div>
     </section>
 
     <section id="antes-depois" class="antes-depois">
@@ -109,7 +124,7 @@
     </section>
 
     <section id="sobre" class="sobre">
-        <img src="logo3.png" alt="Logo" class="sobre-logo">
+        <img src="logovl3.png" alt="Logo" class="sobre-logo">
         
         <div class="sobre-container">
             <div class="sobre-imagem-container">

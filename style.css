@@ -34,9 +34,31 @@ body {
 }
 
 .logo {
-    max-height: 50px;
+    max-height: 150px;
+    height: auto;
+    margin-right: 10px; /* Adiciona espaçamento entre a logo e o texto */
     filter: invert(1);
 }
+
+.personal-name {
+    font-size: 1.5em; /* Ajuste o tamanho da fonte */
+}
+
+.name-yellow {
+    color: var(--cor-destaque); /* Cor amarela para a primeira parte do nome */
+}
+
+.name-black {
+    color: var(--cor-texto-principal); /* Cor amarela para a primeira parte do nome */
+    font-weight: bold;
+}
+
+.logo-container {
+    display: flex; /* Alinha a logo e o texto lado a lado */
+    align-items: center; /* Centraliza verticalmente a logo e o texto */
+}
+
+
 
 .nav-links {
     display: flex;
@@ -114,6 +136,33 @@ section {
 .home {
     background-color: rgba(186, 189, 217, 0.2);
     text-align: center;
+    display: flex; /* Alinha os elementos (texto e imagem) lado a lado */
+    justify-content: center; /* Centraliza horizontalmente os elementos */
+    align-items: center; /* Centraliza verticalmente os elementos */
+    padding: 20px; /* Adiciona espaçamento interno */
+}
+
+.home-content {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os elementos se quebrem para a próxima linha em telas menores */
+    align-items: center;
+}
+
+.form-container {
+    margin-right: 20px; /* Adiciona espaçamento entre o formulário e a imagem */
+}
+
+.image-container {
+    flex: 1; /* Ocupa espaço flexível */
+    max-width: 50%; /* Largura máxima da imagem em telas maiores */
+    height: auto; /* Altura automática para manter a proporção */
+    margin-right: 20px; /* Espaçamento entre a imagem e o formulário */
+}
+
+.home-image {
+    width: 100%; /* Largura da imagem */
+    height: 100%; /* Altura da imagem */
+    object-fit: cover; /* Preenche o contêiner da imagem completamente */
 }
 
 .home h1 {
@@ -214,6 +263,11 @@ section {
     justify-content: center;
 }
 
+.metodo h2 {
+    color:  var(--cor-destaque)/* Título da seção em amarelo */
+}
+
+
 .metodo-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -231,6 +285,16 @@ section {
 
 .metodo-card:hover {
     transform: scale(1.05);
+}
+
+.metodo-card i {
+    font-size: 2em; /* Tamanho do ícone */
+    margin-bottom: 10px; /* Espaçamento abaixo do ícone */
+    color: var(--cor-destaque); /* Cor do ícone */
+}
+
+.metodo-card h3 {
+    color: yellow; /* Título do card em amarelo */
 }
 
 .metodo .btn-container {
