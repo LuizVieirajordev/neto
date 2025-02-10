@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome do Profissional - Personal e Nutricionista</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <img src="LOGO.png" alt="Logo" class="logo">Neto | Personal e Nutrição
+        
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Início</a>
+            <a href="#metodo">Método</a>
+            <a href="#antes-depois">Resultados</a>
+            <a href="#depoimentos">Depoimentos</a>
+            <a href="#sobre">Sobre Mim</a>
+            <a href="#contato">Contato</a>
+        </div>
+    </nav>
+
+    <section id="home" class="home">
+        <h1>Transforme seu Corpo, Transforme sua Vida</h1>
+        <form id="formularioContato" class="formulario">
+            <input type="text" id="nome" placeholder="Seu Nome" required>
+            <input type="tel" id="whatsapp" placeholder="Seu WhatsApp" required>
+            <input type="email" id="email" placeholder="Seu E-mail" required>
+            <button type="submit" class="btn-enviar">Quero ser minha melhor versão!</button>
+        </form>
+    </section>
+
+    <section id="metodo" class="metodo">
+        <h2>Conquiste o corpo e a saúde que você sempre quis</h2>
+        <p>Descubra o método que te leva ao sucesso</p>
+        <p>Através de uma avaliação completa, irei entender suas necessidades, hábitos e objetivos. Criaremos juntos um plano alimentar personalizado e um programa de treinamento sob medida para você.</p>
+        
+        <div class="metodo-grid">
+            <div class="metodo-card">
+                <h3>Consulta Nutricional Individualizada</h3>
+                <ul>
+                    <li>Anamnese detalhada para entender sua rotina</li>
+                    <li>Avaliação antropométrica</li>
+                    <li>Orientações práticas e plano alimentar personalizado</li>
+                </ul>
+            </div>
+            <div class="metodo-card">
+                <h3>Avaliação Postural e Corporal</h3>
+                <ul>
+                    <li>Análise postural em repouso e movimento</li>
+                    <li>Avaliação da composição corporal</li>
+                    <li>Identificação de desvios e desequilíbrios</li>
+                </ul>
+            </div>
+            <div class="metodo-card">
+                <h3>Treinamento Personalizado</h3>
+                <ul>
+                    <li>Programa de exercícios específico</li>
+                    <li>Acompanhamento individualizado</li>
+                    <li>Orientação para execução correta</li>
+                </ul>
+            </div>
+        </div>
+        <div class="btn-container">
+            <button class="btn-enviar" onclick="scrollToForm()">Quero ser minha melhor versão!</button>
+         </div>
+    </section>
+
+    <section id="antes-depois" class="antes-depois">
+        <h2>Veja os Resultados</h2>
+        <div class="slider-container">
+            <div class="slide">
+                <img src="antes.png" alt="Antes">
+                <img src="depois.png" alt="Depois">
+            </div>
+            <div class="slide">
+                <img src="antes2.png" alt="Antes">
+                <img src="depois2.png" alt="Depois">
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="depoimentos">
+        <h2>Depoimentos</h2>
+        <div class="depoimentos-grid">
+            <div class="depoimento-card">
+                <img src="depoimento1.png" alt="Cliente 1">
+                <p>"Transformação incrível!"</p>
+            </div>
+            <div class="depoimento-card">
+                <img src="depoimento2.png" alt="Cliente 2">
+                <p>"Consegui meus objetivos"</p>
+            </div>
+            <div class="depoimento-card">
+                <img src="depoimento1.png" alt="Cliente 3">
+                <p>"Método único e eficiente"</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="sobre">
+        <img src="logo3.png" alt="Logo" class="sobre-logo">
+        
+        <div class="sobre-container">
+            <div class="sobre-imagem-container">
+                <img src="personal.png" alt="Nome do Profissional" class="sobre-imagem">
+                <div class="sobre-arte">
+                    <h3>José Arduini Neto</h3>
+                </div>
+            </div>
+            
+            <div class="sobre-conteudo">
+                <h4>CREF: XXXXX | CRN: YYYYY</h4><br>
+                <p class="sobre-texto">
+                    Com mais de 10 anos de experiência em nutrição esportiva e treinamento personalizado, dedico minha carreira a transformar vidas através de um acompanhamento individualizado e baseado em evidências científicas. Graduado em Educação Física e Nutrição, com especializações em fisiologia do exercício e nutrição esportiva.
+                </p>
+                <p class="sobre-texto">
+                    Minha abordagem única combina conhecimentos de treinamento físico e nutrição para criar programas verdadeiramente personalizados. Acredito que cada pessoa é única e merece um planejamento específico para suas necessidades e objetivos, sempre priorizando saúde e resultados sustentáveis.
+                </p>
+                <div class="sobre-btn-container">
+                    <button class="btn-enviar" onclick="scrollToForm()">Quero ser minha melhor versão!</button>
+<br>
+                </div>
+            </div>
+        </div>
+        <div class="redes-sociais">
+            <h2>Redes Sociais:</h2>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        
+    </section>
+
+    
+
+    <footer>
+        <p>© 2024 Todos os direitos reservados</p>
+        <p>Desenvolvido por <a href="https://github.com/luizvieira" target="_blank">Luiz Vieira Dev</a></p>
+    </footer>
+    <script>
+        // Adiciona funcionalidade de menu responsivo
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            // Alterna a classe 'active' no menu toggle
+            this.classList.toggle('active');
+            
+            // Alterna a classe 'active' nos links de navegação
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+
+        // Fecha o menu quando um link é clicado
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.menu-toggle').classList.remove('active');
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+
+        function scrollToForm() {
+    // Seleciona o formulário
+    const form = document.getElementById('formularioContato');
+    // Rola suavemente até o formulário
+    form.scrollIntoView({ behavior: 'smooth' });
+    // Opcional: coloca foco no primeiro campo
+    document.getElementById('nome').focus();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const leadForm = document.getElementById('leadForm');
+    
+    leadForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const nome = document.getElementById('nome').value;
+        const whatsapp = document.getElementById('whatsapp').value;
+        const email = document.getElementById('email').value;
+        
+        const message = `Olá, me chamo ${nome}, meu WhatsApp é ${whatsapp} e meu e-mail é ${email}, quero ser minha melhor versão!`;
+        
+        // Replace with your WhatsApp number
+        const whatsappNumber = '+5511999999999';
+        const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        
+        window.open(whatsappLink, '_blank');
+    });
+
+    // Optional: Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+});
+    </script>
+
+   
+</body>
+</html>
