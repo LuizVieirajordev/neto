@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="personal-trainer-script.js"></script>
     
 </head>
 <body>
@@ -44,7 +45,7 @@
                 <h1>Transforme seu Corpo, Transforme sua Vida</h1>
                 <form id="formularioContato" class="formulario">
                     <input type="text" id="nome" placeholder="Seu Nome" required>
-                    <input type="tel" id="whatsapp" placeholder="Seu WhatsApp" required>
+                    <input type="tel" id="whatsapp" placeholder="Seu telefone com DDD" maxlength="15" required>
                     <input type="email" id="email" placeholder="Seu E-mail" required>
                     <button type="submit" class="btn-enviar">Quero ser minha melhor versão!</button>
                 </form>
@@ -87,21 +88,46 @@
             </div>
         </div>
         <div class="btn-container">
-            <button class="btn-enviar" onclick="scrollToForm()">Quero ser minha melhor versão!</button>
+            <a href="#home" class="btn-enviar2" role="button" aria-pressed="true">Quero ser minha melhor versão!</a>
         </div>
     </section>
 
     <section id="antes-depois" class="antes-depois">
         <h2>Veja os Resultados</h2>
         <div class="slider-container">
-            <div class="slide">
-                <img src="antes.png" alt="Antes">
-                <img src="depois.png" alt="Depois">
+            <div class="comparison-slider">
+                <!-- Primeiro conjunto -->
+                <div class="comparison-item">
+                    <div class="before-after-wrapper">
+                        <div class="before-image">
+                            <img src="antes.png" alt="Antes">
+                            <span class="label">Antes</span>
+                        </div>
+                        <div class="after-image">
+                            <img src="depois.png" alt="Depois">
+                            <span class="label">Depois</span>
+                        </div>
+                        <div class="slider-handle"></div>
+                    </div>
+                </div>
+                <!-- Segundo conjunto -->
+                <div class="comparison-item">
+                    <div class="before-after-wrapper">
+                        <div class="before-image">
+                            <img src="antes.png" alt="Antes">
+                            <span class="label">Antes</span>
+                        </div>
+                        <div class="after-image">
+                            <img src="depois.png" alt="Depois">
+                            <span class="label">Depois</span>
+                        </div>
+                        <div class="slider-handle"></div>
+                    </div>
+                </div>
+                <!-- Adicione mais conjuntos conforme necessário até 5 -->
             </div>
-            <div class="slide">
-                <img src="antes2.png" alt="Antes">
-                <img src="depois2.png" alt="Depois">
-            </div>
+            <button class="nav-button prev" aria-label="Anterior">&#10094;</button>
+            <button class="nav-button next" aria-label="Próximo">&#10095;</button>
         </div>
     </section>
 
@@ -143,7 +169,7 @@
                     Minha abordagem única combina conhecimentos de treinamento físico e nutrição para criar programas verdadeiramente personalizados. Acredito que cada pessoa é única e merece um planejamento específico para suas necessidades e objetivos, sempre priorizando saúde e resultados sustentáveis.
                 </p>
                 <div class="sobre-btn-container">
-                    <button class="btn-enviar" onclick="scrollToForm()">Quero ser minha melhor versão!</button>
+                    <a href="#home" class="btn-enviar2" role="button" aria-pressed="true">Quero ser minha melhor versão!</a>
 <br>
                 </div>
             </div>
@@ -163,64 +189,6 @@
         <p>© 2024 Todos os direitos reservados</p>
         <p>Desenvolvido por <a href="https://github.com/luizvieira" target="_blank">Luiz Vieira Dev</a></p>
     </footer>
-    <script>
-        // Adiciona funcionalidade de menu responsivo
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            // Alterna a classe 'active' no menu toggle
-            this.classList.toggle('active');
-            
-            // Alterna a classe 'active' nos links de navegação
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
-
-        // Fecha o menu quando um link é clicado
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.querySelector('.menu-toggle').classList.remove('active');
-                document.querySelector('.nav-links').classList.remove('active');
-            });
-        });
-
-        function scrollToForm() {
-    // Seleciona o formulário
-    const form = document.getElementById('formularioContato');
-    // Rola suavemente até o formulário
-    form.scrollIntoView({ behavior: 'smooth' });
-    // Opcional: coloca foco no primeiro campo
-    document.getElementById('nome').focus();
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    const leadForm = document.getElementById('leadForm');
-    
-    leadForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        
-        const nome = document.getElementById('nome').value;
-        const whatsapp = document.getElementById('whatsapp').value;
-        const email = document.getElementById('email').value;
-        
-        const message = `Olá, me chamo ${nome}, meu WhatsApp é ${whatsapp} e meu e-mail é ${email}, quero ser minha melhor versão!`;
-        
-        // Replace with your WhatsApp number
-        const whatsappNumber = '+5511999999999';
-        const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-        
-        window.open(whatsappLink, '_blank');
-    });
-
-    // Optional: Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-});
-    </script>
-
-   
+       
 </body>
 </html>

@@ -34,7 +34,7 @@ body {
 }
 
 .logo {
-    max-height: 150px;
+    max-height: 100px;
     height: auto;
     margin-right: 10px; /* Adiciona espaçamento entre a logo e o texto */
     filter: invert(1);
@@ -233,6 +233,7 @@ section {
     font-size: 16px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-decoration: none;
     
     /* Animação de pulso suave */
     animation: pulse 2s infinite;
@@ -267,6 +268,12 @@ section {
     color:  var(--cor-destaque)/* Título da seção em amarelo */
 }
 
+.metodo p {
+    margin: 20px 0;
+    text-align: center;
+    color: var(--cor-texto-principal);
+}
+
 
 .metodo-grid {
     display: grid;
@@ -281,6 +288,13 @@ section {
     border-radius: 10px;
     border: 1px solid var(--cor-secundaria);
     transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.metodo-card ul {
+    list-style: circle;
+    padding: 30px;
+    margin: 0 px;
 }
 
 .metodo-card:hover {
@@ -306,17 +320,153 @@ section {
 
 .antes-depois {
     background-color: rgba(219, 212, 37, 0.1);
+    padding: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
+.antes-depois h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+
 
 .slider-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
+.comparison-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.comparison-item {
+    flex: 0 0 100%;
+    padding: 0 1rem;
+}
+
+.before-after-wrapper {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.before-image,
+.after-image {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: width 0.3s ease;
+}
+
+.before-image {
+    left: 0;
+    width: 50%;
+    z-index: 1;
+}
+
+.after-image {
+    right: 0;
+    width: 50%;
+}
+
+.before-image img,
+.after-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.after-image img {
+    right: 0;
+}
+
+.slider-handle {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #fff;
+    cursor: ew-resize;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+
+.slider-handle::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.label {
+    position: absolute;
+    bottom: 20px;
+    padding: 5px 10px;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.before-image .label {
+    left: 20px;
+}
+
+.after-image .label {
+    right: 20px;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.8);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3;
+    transition: background 0.3s ease;
+}
+
+.nav-button:hover {
+    background: rgba(255,255,255,1);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .before-after-wrapper {
+        height: 300px;
+    }
+}
 /* Estilos para padronizar imagens */
-.slide img, 
 .depoimento-card img, 
 .sobre img {
     object-fit: cover;  /* Cobrir área mantendo proporção */
@@ -327,16 +477,7 @@ section {
     border-radius: 10px; /* Cantos arredondados */
 }
 
-.slide {
-    display: flex;
-    gap: 20px;
-}
 
-.slide img {
-    max-width: 300px;
-    border-radius: 10px;
-    border: 2px solid var(--cor-destaque);
-}
 
 .depoimentos {
     background-color: rgba(186, 189, 217, 0.2);
